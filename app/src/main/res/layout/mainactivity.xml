@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cool_navy">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/HeaderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cool_navy">
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textSize="12pt"
+            android:paddingVertical="10dp"
+            android:gravity="center"
+            android:paddingStart="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:fontFamily="@font/inter"
+            android:text="ReelResist">
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/circleBlock"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+        android:id="@+id/block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Block All"
+        android:background="@color/cool_navy"
+        android:textColor="@color/white"
+        android:textSize="12pt"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/circleBlock"
+        app:layout_constraintBottom_toBottomOf="@id/circleBlock"
+        app:layout_constraintStart_toStartOf="@id/circleBlock"
+        app:layout_constraintEnd_toEndOf="@id/circleBlock"/>
+    <TextView
+        android:id="@+id/labelforspecificapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/circleBlock"
+        android:text="Want to block only specific apps ?"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/white"
+        android:layout_marginTop="25dp"
+        android:paddingStart="20dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/circleBlock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/listborder">
+        <TextView
+            android:id="@+id/labelforspecificapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/circleBlock"
+            android:text="Want to block only specific apps ?"
+            android:fontFamily="@font/inter"
+            android:textColor="@color/white"
+            android:layout_marginTop="25dp"
+            android:paddingStart="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/instagram"
+            app:layout_constraintTop_toBottomOf="@id/labelforspecificapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <!-- ImageView for the app icon -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ig"
+                android:layout_marginEnd="8dp" />
+
+            <!-- TextView for the app name -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Instagram"
+                android:textSize="20sp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Switch for toggling -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/instagramSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/youtube"
+            app:layout_constraintTop_toBottomOf="@id/instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <!-- ImageView for the app icon -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/youtube"
+                android:layout_marginEnd="8dp" />
+
+            <!-- TextView for the app name -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="YouTube"
+                android:textSize="20sp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Switch for toggling -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/youtubeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/snapchat"
+            app:layout_constraintTop_toBottomOf="@id/youtube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center_vertical">
+
+            <!-- ImageView for the app icon -->
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/snapchat"
+                android:layout_marginEnd="8dp" />
+
+            <!-- TextView for the app name -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Snapchat"
+                android:textSize="20sp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Switch for toggling -->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/snapchatSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
